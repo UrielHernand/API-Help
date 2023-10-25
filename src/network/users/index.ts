@@ -1,5 +1,12 @@
-function userGet (id: string) {
-  return fetch(`https://reqres.in/api/users/${id}`)
+import exprerss, {request, response} from "express";
+const router = exprerss.Router();
+
+function getUserByEmail( req = request, res = response) {
+   const { email } = req.params;
+   res.send(`User ${email}`);
+
 }
 
-export default  userGet;
+router.get('/', getUserByEmail);
+export default router;
+
