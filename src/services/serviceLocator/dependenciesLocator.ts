@@ -1,10 +1,12 @@
+
 interface Type<T> {
     new (...args: any[]): T;
 }
- 
+//está interface 
 type Token<T> = Type<T> | string;
  
 type BinderType = 'lazySingleton' | 'factory';
+
  
 type Binder<T> = {
     type: BinderType;
@@ -27,11 +29,11 @@ export class DependencyLocator {
         this.factories.set(token, { type: 'lazySingleton', fn });
     }
 
-    static getInstance(): DependencyLocator {
+    static getInstance(): DependencyLocator 
+    {
       if (!DependencyLocator.instance) {
         DependencyLocator.instance = new DependencyLocator();
       }
- 
       return DependencyLocator.instance;
     }
  
@@ -40,6 +42,7 @@ export class DependencyLocator {
  
       if (!factory) {
         throw new Error(`Dependency ${token} is not registered`);
+
       }
  
       if (factory.type === 'lazySingleton') {
