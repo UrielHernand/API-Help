@@ -1,13 +1,25 @@
  
  import {getUsersUtils} from "../../services/serviceLocator/composer"
- import { newUserFields } from "../../interfaces";
+ import { GetUserRegister, NewUserRegister, newUserFields } from "../../interfaces";
 
 
- function getUserByEmail(email: string):Promise<newUserFields | string>{
+ function getUserByEmail(email: string):Promise<GetUserRegister| string>{
     const userUtils =  getUsersUtils();
    
     return userUtils.getUserByEmail(email);
 
 }
+function newUser(newUser:  NewUserRegister ) :Promise<any>
+{
+    
 
-export default {getUserByEmail}
+    const userUtils =  getUsersUtils();
+    return userUtils.newUser(newUser);
+
+}
+function getUsers():Promise<any>{
+    const userUtils =  getUsersUtils();
+    return userUtils.getUsers();
+}
+
+export default {getUserByEmail, newUser, getUsers}

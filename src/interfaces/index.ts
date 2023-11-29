@@ -19,6 +19,27 @@ enum genderType {
     } | null,
 }
 
+
+export type NewUserRegister = {
+    names : string,
+    lastNames : string,
+    email : string,
+    password : string,
+    phtoto? : string,
+
+}
+
+export type GetUserRegister = {
+    names : string,
+    lastNames : string,
+    email : string,
+    password : string,
+    phtoto? : string,
+    id : number
+
+}
+
+
 export type {newUserFields, genderType}
 
 

@@ -1,7 +1,11 @@
 import { Connection} from "mysql2";
+//importa cripto
+
+import CryptoJS from "crypto-js";
+
 
 import redis from "../../services/redis/index";
-import { newUserFields } from "../../interfaces";
+import { GetUserRegister, NewUserRegister, newUserFields } from "../../interfaces";
 export class UsersUtils {
 
     private database: Connection;
@@ -12,45 +16,56 @@ export class UsersUtils {
         console.log("Api en constructor de UsersUtils" );
     } 
 
-    public async getUserByEmail(email: string): Promise<newUserFields | string> {
+    public async getUserByEmail(email: string): Promise<GetUserRegister | string> {
 
+      /*   const existCache = await redis.get(email);
+
+        if(existCache){
+            return JSON.parse(existCache);
+        }
+ */
         //validar que esto este bien
-
         console.log("email", email);
-
-
-     const query = `SELECT * FROM users WHERE email = '${email}'`;
-    
-
-     const [rows] = await this.database.promise().query(query);
-
+        const query = `SELECT * FROM users WHERE email = '${email}'`;
+        const [rows] = await this.database.promise().query(query);
 
         if (Array.isArray(rows) && rows.length === 0) {
             return "user not found";
         }
-    
- 
+        
+        //establecer un tiempo de expiración
+/*         await redis.set("UserByGmail", JSON.stringify(rows[0]))
+        const todayEnd = new Date().setHours(23,59,59,999);
+        await redis.expireAt("UserByGmail", todayEnd/1000); */
+
         return rows[0];
     }
 
     public async  getUsers() {
-        const existCache = await redis.get("allUsers");
+        const query = "SELECT * FROM users";
+        const [rows] = await this.database.promise().query(query);
+        return rows;
+    }
 
-        if (existCache) {
-            return JSON.parse(existCache);
-        }
+    public async newUser (newUser :  NewUserRegister){
+
+        const {
+            names,
+            lastNames, 
+            password,
+            email
+        } =  newUser;
+
         
-        const [rows, fields] = await this.database.promise().query("SELECT * FROM users");
-        const sendable = {
-            rows,
-            fields
-        }
 
-        //establecer un tiempo de expiración
-        await redis.set("allUsers", JSON.stringify(sendable));
-        const todayEnd = new Date().setHours(23,59,59,999);
-        await redis.expireAt("allUsers", todayEnd/1000);
-        return sendable;
+        const hash = CryptoJS.AES.encrypt( password, process.env.CHAT_AI_DB_SECRETKEY).toString();
+        //ejecutar query preparada
+        const query = `INSERT INTO users (name,lastName,email,password) VALUES (?,?,?,?)`
+        const result = await    this.database.promise().query(query,[names, lastNames, email, hash]);
+
+       return result;
+
+
     }
 
 }
