@@ -4,7 +4,7 @@ import { Connection} from "mysql2";
 import CryptoJS from "crypto-js";
 
 
-import redis from "../../services/redis/index";
+/* import redis from "../../services/redis/index"; */
 import { GetUserRegister, NewUserRegister, newUserFields } from "../../interfaces";
 export class UsersUtils {
 

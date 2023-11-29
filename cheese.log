@@ -1,0 +1,28 @@
+[2023-11-28T22:50:21.965] [INFO] succes - Tue Nov 28 2023 22:50:21 GMT-0600 (hora estándar central) ::1 POST /v1/users/login 200 eyJhb
+[2023-11-28T22:51:36.541] [ERROR] cheese - Tue Nov 28 2023 22:51:36 GMT-0600 (hora estándar central) ::1 POST /v1/users/login 500 Error al iniciar sesión
+[2023-11-28T22:53:26.792] [ERROR] cheese - Tue Nov 28 2023 22:53:26 GMT-0600 (hora estándar central) ::1 POST /v1/users/login 500 
+[2023-11-28T22:54:30.399] [ERROR] cheese - Tue Nov 28 2023 22:54:30 GMT-0600 (hora estándar central) ::1 POST /v1/users/login 500 
+[2023-11-28T22:54:36.463] [ERROR] cheese - Tue Nov 28 2023 22:54:36 GMT-0600 (hora estándar central) ::1 POST /v1/users/login 500 
+[2023-11-28T22:54:54.450] [ERROR] cheese - Tue Nov 28 2023 22:54:54 GMT-0600 (hora estándar central) ::1 POST /v1/users/login 500 
+[2023-11-28T22:55:25.773] [INFO] succes - Tue Nov 28 2023 22:55:25 GMT-0600 (hora estándar central) ::1 POST /v1/users/ 200 
+[2023-11-28T23:02:07.468] [INFO] succes - Tue Nov 28 2023 23:02:07 GMT-0600 (hora estándar central) ::1 GET /v1/users/ 200 localhost:9000
+[2023-11-28T23:03:39.585] [INFO] succes -  fecha : Tue Nov 28 2023 23:03:39 GMT-0600 (hora estándar central) IP: ::1 GET /v1/users/ 200 localhost:9000
+[2023-11-28T23:04:51.284] [INFO] succes -  : Tue Nov 28 2023 23:04:51 GMT-0600 (hora estándar central)  ::1 GET /v1/users/ 200 localhost:9000
+[2023-11-28T23:05:07.250] [INFO] succes -  : Tue Nov 28 2023 23:05:07 GMT-0600 (hora estándar central)  ::1 GET /v1/users/ 200 localhost:9000
+[2023-11-28T23:05:14.690] [INFO] succes -  : Tue Nov 28 2023 23:05:14 GMT-0600 (hora estándar central)  ::1 GET /v1/users/ 200 localhost:9000
+[2023-11-28T23:05:17.838] [INFO] succes -  : Tue Nov 28 2023 23:05:17 GMT-0600 (hora estándar central)  ::1 GET /v1/users/ 200 localhost:9000
+[2023-11-28T23:06:05.847] [INFO] succes -  : Tue Nov 28 2023 23:06:05 GMT-0600 (hora estándar central)  ::1 GET /v1/users/all 200 localhost:9000
+[2023-11-28T23:06:41.648] [INFO] succes -  : Tue Nov 28 2023 23:06:41 GMT-0600 (hora estándar central)  ::1 GET /v1/users 200 localhost:9000
+[2023-11-28T23:07:42.898] [INFO] succes -  : Tue Nov 28 2023 23:07:42 GMT-0600 (hora estándar central)  ::1 GET /v1/users 200 localhost:9000
+[2023-11-28T23:07:49.513] [INFO] succes -  : Tue Nov 28 2023 23:07:49 GMT-0600 (hora estándar central)  ::1 GET /v1/users/ 200 localhost:9000
+[2023-11-28T23:07:53.869] [ERROR] cheese - Tue Nov 28 2023 23:07:53 GMT-0600 (hora estándar central) ::1 POST /v1/users/ 500 
+[2023-11-28T23:09:30.558] [ERROR] cheese - Tue Nov 28 2023 23:09:30 GMT-0600 (hora estándar central) ::1 POST /v1/users/ 500 
+[2023-11-28T23:09:35.165] [INFO] succes -  : Tue Nov 28 2023 23:09:35 GMT-0600 (hora estándar central)  ::1 GET /v1/users/ 200 localhost:9000
+[2023-11-28T23:09:46.202] [INFO] succes -  : Tue Nov 28 2023 23:09:46 GMT-0600 (hora estándar central)  ::1 GET /v1/users/ 200 localhost:9000
+[2023-11-28T23:10:11.045] [INFO] succes -  : Tue Nov 28 2023 23:10:11 GMT-0600 (hora estándar central)  ::1 POST /v1/users/ 200 localhost:9000
+[2023-11-28T23:10:16.515] [INFO] succes -  : Tue Nov 28 2023 23:10:16 GMT-0600 (hora estándar central)  ::1 GET /v1/users/ 200 localhost:9000
+[2023-11-28T23:11:54.387] [INFO] succes -  : Tue Nov 28 2023 23:11:54 GMT-0600 (hora estándar central)  ::1 GET /v1/users/ 200 localhost:9000
+[2023-11-28T23:12:20.936] [INFO] succes -  : Tue Nov 28 2023 23:12:20 GMT-0600 (hora estándar central)  ::1 GET /v1/users/ 200 localhost:9000
+[2023-11-28T23:12:27.254] [INFO] succes -  : Tue Nov 28 2023 23:12:27 GMT-0600 (hora estándar central)  ::1 GET /v1/users 200 localhost:9000
+[2023-11-28T23:12:41.179] [INFO] succes -  : Tue Nov 28 2023 23:12:41 GMT-0600 (hora estándar central)  ::1 GET /v1/users 200 localhost:9000
+[2023-11-28T23:12:53.461] [INFO] succes -  : Tue Nov 28 2023 23:12:53 GMT-0600 (hora estándar central)  ::1 GET /v1/users?email=@EJEMPLO.COM 200 localhost:9000

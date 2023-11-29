@@ -2,25 +2,28 @@ import exprerss, {request, response} from "express";
 import Controller from '../../controllers/users';
 import passport from "passport";
 import jwt from "jsonwebtoken";
+import {logError, logSucces} from "../../services/Logs/index";
+import { log } from "console";
 const router = exprerss.Router();
 
  function getUserByEmail( req = request, res = response) {
       const {email}  = req.query;
       Controller.getUserByEmail( String(email))
-      .then((result) => res.send(result))
+      .then((result) =>logSucces(req, res, result, 200) )
       .catch((err) => {
-        res.send(err);
+        logError(req, res, err, 500);
         console.log(err);
-      } 
+      }   
       
       );
 }
 function getUsers(req = request, res = response){
 
-  Controller.getUsers().then((result) => res.send(result))
+  Controller.getUsers()
+  .then((result) => logSucces(req, res, result, 200))
   .catch((err) => {
 
-    res.send(err);
+    logError(req, res, err, 500);
     console.log(err);
    }    
  ); 
@@ -38,9 +41,9 @@ function newUser(req = request, res = response){
   }
 
   Controller.newUser(newUser)
-  .then((result) => res.send(result))
+  .then((result) => logSucces(req, res, result, 200))
   .catch((err) => {
-    res.send(err);
+    logError(req, res, err, 500);
     console.log(err);
   } 
   
@@ -55,14 +58,17 @@ function login (req = request, res = response){
     'signup',
     async (error, user) => {
       if (error ) {
-        res.status(401).send(error);
-        console.log(error);
+     
+        logError(req, res, error, 500);
+        
       }
       if (!user && !error) {
-        res.status(401).send('User not found');
+       const message = "Usuario o contraseña incorrectos";
+       logError(req, res, message, 401);
       }
       if (user && !error) {
         const token = jwt.sign(user, process.env.CHAT_AI_DB_SECRETKEY);
+
         res.status(200).send({ token });
 
       }
