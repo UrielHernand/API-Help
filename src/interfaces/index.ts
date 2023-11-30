@@ -38,6 +38,15 @@ export type GetUserRegister = {
     id : number
 
 }
+export type UpdateUserRegister = {
+    names : string,
+    lastNames : string,
+    email : string,
+    password : string,
+    phtoto? : string,
+
+
+}
 
 
 export type {newUserFields, genderType}

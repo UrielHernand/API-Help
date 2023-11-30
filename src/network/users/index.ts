@@ -51,6 +51,28 @@ function newUser(req = request, res = response){
   
 }
 
+function updateUser(req = request, res = response){
+  const { names , lastNames, email, password } = req.body;
+
+  //Primero que busque el usuario por el email y luego que actualice los campos que se le pasen
+
+  const updateUser = {
+    names,
+    lastNames,
+    email,
+    password
+  }
+
+  Controller.updateUser(updateUser)
+  .then((result) => logSucces(req, res, result, 200))
+  .catch((err) => {
+    logError(req, res, err, 500);
+    console.log(err);
+  } 
+  
+  );
+}
+
 function login (req = request, res = response){
 
   // valida que el usuario exista y que la contraseña sea correcta
@@ -84,5 +106,6 @@ router.get('/', getUserByEmail);
 router.post('/', newUser);
 router.get('/all', getUsers);
 router.post('/login', login)
+router.put('/', updateUser);
 export default router;
 

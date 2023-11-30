@@ -26,3 +26,11 @@
 [2023-11-28T23:12:27.254] [INFO] succes -  : Tue Nov 28 2023 23:12:27 GMT-0600 (hora estándar central)  ::1 GET /v1/users 200 localhost:9000
 [2023-11-28T23:12:41.179] [INFO] succes -  : Tue Nov 28 2023 23:12:41 GMT-0600 (hora estándar central)  ::1 GET /v1/users 200 localhost:9000
 [2023-11-28T23:12:53.461] [INFO] succes -  : Tue Nov 28 2023 23:12:53 GMT-0600 (hora estándar central)  ::1 GET /v1/users?email=@EJEMPLO.COM 200 localhost:9000
+[2023-11-29T16:46:46.332] [INFO] succes -  : Wed Nov 29 2023 16:46:46 GMT-0600 (hora estándar central)  ::1 GET /v1/users 200 localhost:9000
+[2023-11-29T16:48:18.332] [INFO] succes -  : Wed Nov 29 2023 16:48:18 GMT-0600 (hora estándar central)  ::1 GET /v1/users?email=@EJEMPLO4.COM 200 localhost:9000
+[2023-11-29T17:26:52.129] [INFO] succes -  : Wed Nov 29 2023 17:26:52 GMT-0600 (hora estándar central)  ::1 PUT /v1/users 200 localhost:9000
+[2023-11-29T17:28:30.799] [INFO] succes -  : Wed Nov 29 2023 17:28:30 GMT-0600 (hora estándar central)  ::1 PUT /v1/users 200 localhost:9000
+[2023-11-29T17:29:06.596] [INFO] succes -  : Wed Nov 29 2023 17:29:06 GMT-0600 (hora estándar central)  ::1 PUT /v1/users 200 localhost:9000
+[2023-11-29T17:32:36.453] [INFO] succes -  : Wed Nov 29 2023 17:32:36 GMT-0600 (hora estándar central)  ::1 PUT /v1/users 200 localhost:9000
+[2023-11-29T17:56:46.425] [INFO] succes -  : Wed Nov 29 2023 17:56:46 GMT-0600 (hora estándar central)  ::1 PUT /v1/users 200 localhost:9000
+[2023-11-29T17:57:30.102] [INFO] succes -  : Wed Nov 29 2023 17:57:30 GMT-0600 (hora estándar central)  ::1 PUT /v1/users 200 localhost:9000

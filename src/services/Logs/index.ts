@@ -34,6 +34,7 @@ function logSucces (req, res, message , status, ){
     const method = req.method;
     const date = new Date();
     const host = req.headers.host;
+  
     const LogMessage = ` : ${date}  ${IP} ${method} ${path} ${status} ${host}`;
     succes.info(LogMessage);
 

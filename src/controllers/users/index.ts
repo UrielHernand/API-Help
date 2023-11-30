@@ -1,6 +1,6 @@
  
  import {getUsersUtils} from "../../services/serviceLocator/composer"
- import { GetUserRegister, NewUserRegister, newUserFields } from "../../interfaces";
+ import { GetUserRegister, NewUserRegister, UpdateUserRegister, newUserFields } from "../../interfaces";
 
 
  function getUserByEmail(email: string):Promise<GetUserRegister| string>{
@@ -22,4 +22,10 @@ function getUsers():Promise<any>{
     return userUtils.getUsers();
 }
 
-export default {getUserByEmail, newUser, getUsers}
+function updateUser(updateUser : UpdateUserRegister ):Promise<any>{
+    const userUtils =  getUsersUtils();
+    return userUtils.updateUser(updateUser);
+   
+}
+
+export default {getUserByEmail, newUser, getUsers, updateUser}
